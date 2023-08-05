@@ -23,6 +23,8 @@ const Coin = () => {
                         <img
                             src={data?.logo}
                             alt="logo"
+                            width={150}
+                            height={150}
                         />
                         <Box>
                             <div>Coin ID : {data?.id}</div>

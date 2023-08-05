@@ -17,17 +17,6 @@ interface CoinObject {
 }
 
 const Coins = () => {
-    // const [coins, setCoins] = useState<CoinObject[]>([]);
-    // const [loading, setLoading] = useState<boolean>(true);
-
-    // useEffect(() => {
-    //     (async () => {
-    //         const data = await (await fetch("https://api.coinpaprika.com/v1/coins")).json();
-    //         setCoins(data.slice(0, 100));
-    //         setLoading(false);
-    //     })();
-    // }, []);
-
     const { isLoading, data } = useQuery<CoinObject[]>(["allCoins"], getCoinAll);
 
     return (

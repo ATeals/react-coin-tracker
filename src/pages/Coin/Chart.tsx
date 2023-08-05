@@ -8,7 +8,6 @@ const Chart = () => {
 
     const { isLoading, data } = useQuery<PriceHistory[]>(["PriceHistory", coinId], () => getPriceHistory(coinId as string));
 
-    console.log(data);
     return (
         <>
             <h1>Chart</h1>
