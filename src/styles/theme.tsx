@@ -1,8 +1,10 @@
 import type { DefaultTheme } from "styled-components";
 
-export const theme: DefaultTheme = {
+export const LightTheme: DefaultTheme = {
     color: {
-        background: "#ced6e0",
+        background: "#f1f2f6",
         text: "#000000",
+        highlight: "#5352ed",
+        boxBg: "#ced6e0",
     },
 };

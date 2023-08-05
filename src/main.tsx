@@ -6,11 +6,11 @@ import router from "./router";
 
 import "./styles/reset.css";
 import { ThemeProvider } from "styled-components";
-import { theme } from "./styles/theme";
+import { LightTheme } from "./styles/theme";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
     <React.StrictMode>
-        <ThemeProvider theme={theme}>
+        <ThemeProvider theme={LightTheme}>
             <RouterProvider router={router} />
         </ThemeProvider>
     </React.StrictMode>

@@ -1,12 +1,13 @@
-import { useParams } from "react-router-dom";
+import { useLocation } from "react-router-dom";
+import { Container } from "../Coins";
 
 const Coin = () => {
-    const { coinId } = useParams();
+    const { state } = useLocation();
 
     return (
-        <>
-            <h1>{coinId}</h1>
-        </>
+        <Container>
+            <h1>{state?.name || "loading..."}</h1>
+        </Container>
     );
 };
 

@@ -3,12 +3,12 @@ import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
     body{
-        background-color : ${(props) => props.theme.background};
+        background-color : ${(props) => props.theme.color.background};
         color : ${(props) => props.theme.text};
     }
 `;
 
-function App() {
+function Layout() {
     return (
         <>
             <GlobalStyle />
@@ -18,4 +18,4 @@ function App() {
     );
 }
 
-export default App;
+export default Layout;

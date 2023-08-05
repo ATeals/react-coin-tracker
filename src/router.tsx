@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import Layout from "./Layout";
 import Coin from "./pages/Coin";
+import Coins from "./pages/Coins";
 
 const router = createBrowserRouter(
     [
@@ -10,7 +11,7 @@ const router = createBrowserRouter(
             children: [
                 {
                     path: "",
-                    element: <h1>coins</h1>,
+                    element: <Coins />,
                 },
                 {
                     path: "/:coinId",
