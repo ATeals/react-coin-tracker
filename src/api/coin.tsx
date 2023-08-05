@@ -11,3 +11,7 @@ export const getCoin = async (coinId: string) => {
 export const getPrice = async (coinId: string) => {
     return await (await fetch(BASE_URL + `tickers/${coinId}`)).json();
 };
+
+export const getPriceHistory = async (coinId: string) => {
+    return await (await fetch(`https://ohlcv-api.nomadcoders.workers.dev?coinId=${coinId}`)).json();
+};

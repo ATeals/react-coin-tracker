@@ -38,11 +38,21 @@ const Coin = () => {
 
                     <Flex>
                         <Button>
-                            <Link to={"price"}>Price</Link>
+                            <Link
+                                to={"price"}
+                                replace
+                            >
+                                Price
+                            </Link>
                         </Button>
 
                         <Button>
-                            <Link to={"chart"}>Chart</Link>
+                            <Link
+                                to={"chart"}
+                                replace
+                            >
+                                Chart
+                            </Link>
                         </Button>
                     </Flex>
                 </>
