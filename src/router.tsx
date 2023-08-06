@@ -36,7 +36,7 @@ const router = createBrowserRouter(
         },
     ],
     {
-        basename: "/react-coin-tracker/",
+        basename: "/",
     }
 );
 
