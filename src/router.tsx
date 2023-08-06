@@ -8,31 +8,36 @@ import Coin from "./pages/Coin";
 import Price from "./pages/Coin/Price";
 import Chart from "./pages/Coin/Chart";
 
-const router = createBrowserRouter([
+const router = createBrowserRouter(
+    [
+        {
+            path: "/",
+            element: <Layout />,
+            children: [
+                {
+                    path: "",
+                    element: <Coins />,
+                },
+                {
+                    path: "/:coinId",
+                    element: <Coin />,
+                    children: [
+                        {
+                            path: "price",
+                            element: <Price />,
+                        },
+                        {
+                            path: "chart",
+                            element: <Chart />,
+                        },
+                    ],
+                },
+            ],
+        },
+    ],
     {
-        path: "/",
-        element: <Layout />,
-        children: [
-            {
-                path: "",
-                element: <Coins />,
-            },
-            {
-                path: "/:coinId",
-                element: <Coin />,
-                children: [
-                    {
-                        path: "price",
-                        element: <Price />,
-                    },
-                    {
-                        path: "chart",
-                        element: <Chart />,
-                    },
-                ],
-            },
-        ],
-    },
-]);
+        basename: "/react-coin-tracker/",
+    }
+);
 
 export default router;
